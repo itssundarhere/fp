@@ -35,7 +35,7 @@
         <property name="hbm2ddl.auto">create</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="com.emp.sample.Employee"/>
+        <mapping resource="com/emp/sample/employee.hbm.xml"/>
 
     </session-factory>
 

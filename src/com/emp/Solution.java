@@ -18,7 +18,7 @@ public class Solution {
 		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		int i = 0;
-		while (i < 3) {
+		while (i < 2) {
 			i++;
 			session.beginTransaction();
 			System.out.print("Enter name:");
