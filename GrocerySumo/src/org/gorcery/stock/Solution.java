@@ -12,33 +12,30 @@ public class Solution {
 
 	public static void main(String[] args) throws IOException {
 
-		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		while (true) {
-			System.out.println("Choice:");
-			int ch = Integer.valueOf(bf.readLine());
-			switch (ch) {
-			case 1:
-				SessionFactory sf = new Configuration().configure().buildSessionFactory();
-				Session session = sf.openSession();
-				session.beginTransaction();
-				System.out.print("Enter ItemName : ");
-				String name = bf.readLine();
-				System.out.print("Enter Quantity : ");
-				int quantity = Integer.valueOf(bf.readLine());
-				System.out.print("Enter Price : ");
-				double price = Float.valueOf(bf.readLine());
-				Item item = new Item(name, quantity, price);
-				session.save(item);
-				session.getTransaction().commit();
-				session.close();
-				break;
-			case 2:
-				System.out.println("totalNumberOfItems  " + Item.getTotalNumberOfItems());
-			default:
-				break;
-			}
-		}
-
+		//BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session session = sf.openSession();
+		Item item = session.get(Item.class, 2);
+		System.out.println("Id :" +item.getId());
+		System.out.println("Name :"+item.getName());
+		System.out.println("Quantity :"+item.getQuantity());
+		System.out.println("Price :"+item.getPrice());
+		
+		session.beginTransaction();
+		item.setName("upasaaa");
+		item.setPrice(20000);
+		session.update(item);
+		session.getTransaction().commit();
+		System.out.println("update");
+		session.close();
+		
+		Session session1 = sf.openSession();
+		
+		session1.beginTransaction();
+		session1.delete(item);
+		session1.getTransaction().commit();
+		System.out.println("Deleted");
+		session1.close();
 	}
 
 }
