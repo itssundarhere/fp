@@ -9,8 +9,8 @@ import javax.persistence.InheritanceType;
 
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-
+@Inheritance
+//Single table
 
 public class Vehicle {
 	@Id
