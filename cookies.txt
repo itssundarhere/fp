@@ -1,0 +1,16 @@
+Cookie cookie = new Cookie("Auth_user",uname);
+				response.addCookie(cookie);
+
+
+
+
+boolean logged =false;
+Cookie cookie = request.getCookies();
+if(cookies!=null){
+	for(Cookie cookie:cookie){
+		if(cookie.getName().equals("auth_user")){
+			logged=true;
+			break;
+		}
+	}
+}
