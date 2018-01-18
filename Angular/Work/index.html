@@ -8,13 +8,13 @@
         </head>
         
         <body>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-md-4 col-3" ng-controller="StoreController as store" ng-hide="store.product.soldOut">
-                            <h1>{{store.product.name}}</h1>
-                            <h1>${{store.product.price}}</h1>
-                            <h1>{{store.product.description}}</h1>
-                            <button ng-show = "store.product.canPurchase" class="btn btn-outline-info">Add to Cart</button>
+            <div class="container" ng-controller="StoreController as store">
+                <div class="row"  >
+                    <div class="col-12 col-sm-6 col-md-4 col-3" ng-repeat="pro in store.product" ng-hide="pro.soldOut">
+                            <h1>{{pro.name}}</h1>
+                            <h1>${{pro.price}}</h1>
+                            <h1>{{pro.description}}</h1>
+                            <button ng-hide = "pro.canPurchase" class="btn btn-outline-info">Add to Cart</button>
                     </div>
                 </div>
             </div>
