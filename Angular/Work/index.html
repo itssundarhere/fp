@@ -8,6 +8,16 @@
         </head>
         
         <body>
-            <h1>{{"Hello welcome to Angular js"}}</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-3" ng-controller="StoreController as store" ng-hide="store.product.soldOut">
+                            <h1>{{store.product.name}}</h1>
+                            <h1>${{store.product.price}}</h1>
+                            <h1>{{store.product.description}}</h1>
+                            <button ng-show = "store.product.canPurchase" class="btn btn-outline-info">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+           <!-- <h1>{{"Hello welcome to Angular js"}}</h1>--> 
         </body>
     </html>
