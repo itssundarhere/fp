@@ -1,0 +1,33 @@
+{
+    "contacts":[{
+        "id":100,
+        "firstName":"Steve",
+        "lastName":"apple",
+        "email":"steve@apple.com",
+        "phone":"+91-9876543211"
+    },{
+        "id":102,
+        "firstName":"Rhode",
+        "lastName":"colonel",
+        "email":"colrohde@usa.com",
+        "phone":"+91-9245312511"
+    },{
+        "id":103,
+        "firstName":"Tony",
+        "lastName":"stark",
+        "email":"tony@stark.com",
+        "phone":"+91-8765543211"
+    },{
+        "id":104,
+        "firstName":"banner",
+        "lastName":"hulk",
+        "email":"banner@hulk.com",
+        "phone":"+91-7654453211"
+    },{
+        "id":105,
+        "firstName":"Bhrama",
+        "lastName":"god",
+        "email":"god@bhrama.com",
+        "phone":"+91-6123543211"
+    }]
+}
