@@ -1,0 +1,9 @@
+it has to enable the json server
+    for that in terminal move the location to particular dicrectory that contains json file
+    
+        then json-server jsonfilename.json
+
+in app.js
+    the ip should be the localhost and the port number must be initialized in each and every function written in the app.js
+
+     $http.delete("http://172.16.73.122:3000/contacts/" + id).then(function (res) {

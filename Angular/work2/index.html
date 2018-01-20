@@ -46,18 +46,13 @@
                 <td>
                     <button ng-show="!contact.editable" ng-click="store.toggleEdit(contact)" class="btn btn-primary btn-sm">Edit</button>
                     <button ng-show="contact.editable" ng-click="store.toggleEdit(contact)" class="btn btn-success btn-sm">Update</button>
-                    <button ng-click="store.delete($index)" class="btn btn-danger btn-sm">Delete</button>
+                    <button ng-click="store.delete($index, contact.id)" class="btn btn-danger btn-sm">Delete</button>
                 </td>
             </tr>
         </table>
     </div>
 
-
-
-
-
-
-
 </body>
+
 
 </html>
